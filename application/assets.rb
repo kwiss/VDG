@@ -21,6 +21,6 @@ configure do
   Compass.configuration do |compass|
     compass.project_path = settings.assets_path
     compass.images_dir   = 'images'
-    compass.output_style = (environment == :production) ? :expanded
+    compass.output_style = :expanded
   end
 end
