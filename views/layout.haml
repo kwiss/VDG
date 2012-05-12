@@ -1,0 +1,11 @@
+= partial "layouts/head"
+%body.two-col
+  #container
+    = partial "layouts/header"
+    #main
+      = yield
+    %aside#sidebar
+      %img{:src => image_path('llama.jpeg') , :alt => "Haml"}
+      %p The Llama sees all.
+    = partial "layouts/footer"
+  = partial "layouts/scripts"

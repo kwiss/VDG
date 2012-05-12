@@ -1,0 +1,26 @@
+%p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+%p
+  = link_to 'Go home', '/'
+  %code <==
+  %em
+    made with
+    %code link_to
+    helper!
+%h2 Form Tag Helpers
+%form{:action => "/"}
+  %p
+    %b
+      %code input_for
+    %br
+      = input_for 'input'
+      %br
+        = link_to 'See this filled with "here is some input"', '/?input=here is some input'
+        = '<br>notice how the value gets set to the value of <code>params[:input]</code> :)' if params[:input]
+  %p
+    %b
+      %code select_for
+    %br
+      = select_for 'select', { 'Nothing' => :zero, 'One' => :one, 'The second' => :two }
+      %br
+        = link_to 'See the second option selected', '/?select=one'
+        = '<br>oooooh... <b>ahhhhhh</b>' if params[:select]
