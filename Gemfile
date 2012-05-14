@@ -19,6 +19,7 @@ gem 'erubis'
 
 # asset stuff
 gem 'haml'
+gem 'sass'
 gem 'coffee-script'   # build the JS
 gem 'compass'         # build the CSS
 gem 'execjs'

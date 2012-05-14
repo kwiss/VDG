@@ -74,7 +74,6 @@ DEPENDENCIES
   haml
   pony
   rack
-  sass
   sinatra
   sinatra-flash
   sinatra-partial
