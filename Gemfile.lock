@@ -69,6 +69,7 @@ DEPENDENCIES
   coffee-script
   compass
   erubis
+  execjs
   foreman
   haml
   pony

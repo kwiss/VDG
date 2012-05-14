@@ -21,6 +21,7 @@ gem 'erubis'
 gem 'haml'
 gem 'coffee-script'   # build the JS
 gem 'compass'         # build the CSS
+gem 'execjs'
 
 # sprockets galore
 gem 'sprockets'
