@@ -27,7 +27,6 @@ if production? # production config / requires
     :to      => 'you@yourdomain.com',
     :from    => 'errors@yourdomain.com',
     :subject => 'Error Occurred on Some Rack Application'
-  require 'execjs'
 else # development or testing only
   use Rack::ShowExceptions
 end
