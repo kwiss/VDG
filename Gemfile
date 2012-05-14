@@ -5,7 +5,7 @@ source :rubygems
 
 # server
 gem 'thin'
-
+gem 'foreman'
 # rack
 gem 'rack'
 
