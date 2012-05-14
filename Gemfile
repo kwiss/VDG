@@ -12,10 +12,6 @@ gem 'rack'
 # sinatra
 gem 'sinatra'
 gem 'sinatra-partial'
-gem 'sinatra-flash', require: 'sinatra/flash' # enables flash[:notice] && flash[:error]
-
-# faster better stronger
-gem 'erubis'
 
 # asset stuff
 gem 'haml'
@@ -27,7 +23,3 @@ gem 'execjs'
 # sprockets galore
 gem 'sprockets'
 gem 'sprockets-helpers'
-
-group :production do
-  gem 'pony'
-end
