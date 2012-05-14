@@ -1,1 +1,1 @@
-web: thin start
+web: bundle exec thin -p 33975 start
