@@ -16,7 +16,7 @@ end
 use Rack::Session::Pool,              # session via pool that sets a cookie reference
   :expire_after => 1800,              # 30 minutes
   :key          => 'rack.session',    # cookie name (probably change this)
-  :secret       => ENV['SESSION_SECRET'] ||= 'super secret'
+  :secret       => Digest::SHA256.hexdigest(Time.now.to_s), # keeps it random :)
   :httponly     => true,              # bad js! No cookies for you!
   :secure       => false,             # change for more secure cookies
   :path         => '/'
