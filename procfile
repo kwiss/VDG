@@ -1,1 +1,1 @@
-web: bundle exec ruby app.rb -p $PORT
+web: bundle exec thin -p 26750 -e production start
