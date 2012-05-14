@@ -23,12 +23,11 @@ use Rack::Session::Pool,              # session via pool that sets a cookie refe
 
 if production? # production config / requires
   require './application/middleware/exceptionmailer'
-  require "execjs"
   use Rack::ExceptionMailer, 
     :to      => 'you@yourdomain.com',
     :from    => 'errors@yourdomain.com',
     :subject => 'Error Occurred on Some Rack Application'
-  
+  require 'execjs'
 else # development or testing only
   use Rack::ShowExceptions
 end
