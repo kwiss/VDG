@@ -15,11 +15,8 @@ jQuery ($) ->
     displace: 'column'
     backGroundImageClass: "bg"
     linkClass: "nav"
-  ## panel state
 
-  pane_state = 2
-  
-  $("#close").click ->
+    $("#close").click ->
     if pane_state is 1
       $("#side_pannel").animate
         marginLeft: "0"
@@ -33,19 +30,17 @@ jQuery ($) ->
       , 500
       pane_state = 1
 
-  $(document).bind "startslide", ->
-    if $.event.moveFrom.id == "div3"
-      $("#side_pannel").animate
-        marginLeft: "0"
-        easing: "easeInQuad"
-      , 500
-      pane_state = 2
-  $(document).bind "endslide", ->
-    if $.event.moveTo.id == "div3"
-     $("#side_pannel").animate
-        marginLeft: "381px"
-        easing: "easeInQuad"
-      , 500
-      pane_state = 1
-  $('#participant').tinyscrollbar()
-
+    $(document).bind "startslide", ->
+      if $.event.moveFrom.id == "div3"
+        $("#side_pannel").animate
+          marginLeft: "0"
+          easing: "easeInQuad"
+        , 500
+        pane_state = 2
+    $(document).bind "endslide", ->
+      if $.event.moveTo.id == "div3"
+       $("#side_pannel").animate
+          marginLeft: "381px"
+          easing: "easeInQuad"
+        , 500
+        pane_state = 1
