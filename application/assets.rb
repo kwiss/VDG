@@ -8,6 +8,7 @@ configure do
   # setup our paths
   settings.sprockets.append_path File.join(settings.assets_path, 'stylesheets')
   settings.sprockets.append_path File.join(settings.assets_path, 'javascripts')
+  settings.sprockets.append_path File.join(settings.assets_path, 'fonts')
   settings.sprockets.append_path File.join(settings.assets_path, 'images')
   
   # configure Sprockets::Helpers

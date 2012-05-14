@@ -1,6 +1,12 @@
 // To configure blueprint, edit the partials/_base.scss file.
+
+
+@import "partials/fonts";
+@import "partials/layout";
 @import "partials/base";
 @import "partials/boilerplate";
-@import "partials/layout";
+@import "partials/ferro";
 
-/* Drop your styles in here! */
+/* GENERAL PAGES PROPERTY */
+
+@import "pages/race";

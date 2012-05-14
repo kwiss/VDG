@@ -1,8 +1,6 @@
 = partial "layouts/head"
-%body.two-col
-  #container
-    = partial "layouts/header"
-    #main
-      = yield
-    = partial "layouts/footer"
+%body
+  = partial "layouts/header"
+  = yield
+  = partial "layouts/bottom_menu"
   = partial "layouts/scripts"

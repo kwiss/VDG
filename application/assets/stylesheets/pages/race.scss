@@ -1,0 +1,78 @@
+// ##### RACE PAGE #####
+#side_pannel {
+  width: 381px;
+  position: absolute;
+  left: -381px;
+  background: image-url('participants.png') no-repeat left top;
+  z-index: 2000; }
+
+#participant {
+  width: 380px;
+  .viewport {
+    width: 365px;
+    height: 575px;
+    overflow: hidden;
+    position: relative; }
+  .overview {
+    list-style: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0;
+    margin: 0; }
+  .scrollbar {
+    background: #EEE;
+    position: relative;
+    background-position: 0 0;
+    float: right;
+    width: 15px; }
+  .track {
+    background: #999;
+    height: 100%;
+    width: 13px;
+    position: relative;
+    padding: 0 1px; }
+  .thumb {
+    background: #EEE;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: -5px; }
+  .disable {
+    display: none; }
+  margin-top: 54px;
+  ul {
+    width: 380px;
+    list-style: none;
+    background: #e3e3e3;
+    margin: 0;
+    padding: 0;
+    li {
+      height: 102px;
+      border-bottom: 1px solid #c9c9c9;
+      border-top: 1px solid #f3f3f3;
+      font-family: 'Helvetica neue', arial, 'Arimo', sans-serif;
+      p {
+        float: left;
+        width: 260px;
+        padding: 5px;
+        font-size: 13px;
+        line-height: 22px;
+        margin: 0;
+        span {
+          font-weight: bold; } }
+      img {
+        float: left;
+        padding: 7px; } } } }
+  #close {
+    background: image-url('participants.png') no-repeat right top;
+    left: 100%;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    width: 49px;
+    height: 205px;
+    text-indent: -5000px; }
