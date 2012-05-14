@@ -1,0 +1,147 @@
+
+initialize = ->
+pinkParksStyles = [
+  featureType: "road"
+  stylers: [ visibility: "off" ]
+,
+  featureType: "administrative"
+  stylers: [ visibility: "off" ]
+,
+  featureType: "poi"
+  stylers: [ visibility: "off" ]
+,
+  featureType: "transit"
+  stylers: [ visibility: "off" ]
+,
+  stylers: [
+    hue: "#224c76"
+  ,
+    invert_lightness: true
+  ,
+    lightness: 5
+  ,
+    gamma: 1.11
+  ,
+    saturation: 5
+   ]
+ ]
+pinkMapType = new google.maps.StyledMapType(pinkParksStyles,
+  name: "Vendee Globe"
+)
+mapOptions =
+  zoom: 13
+  disableDefaultUI: true
+  center: new google.maps.LatLng(46.46595, -1.839493)
+  mapTypeControlOptions:
+    mapTypeIds: [ google.maps.MapTypeId.ROADMAP, "pink_parks" ]
+
+map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions)
+map.mapTypes.set "pink_parks", pinkMapType
+map.setMapTypeId "pink_parks"
+point1 = new google.maps.LatLng(46.432958, -1.839493)
+image1 = new google.maps.MarkerImage("<%= asset_path('boats/boat1.png') %>", new google.maps.Size(25, 39), new google.maps.Point(0, 0), new google.maps.Point(13, 39))
+point2 = new google.maps.LatLng(46.439958, -1.842493)
+image2 = new google.maps.MarkerImage("<%= asset_path('boats/boat2.png') %>", new google.maps.Size(25, 39), new google.maps.Point(0, 0), new google.maps.Point(13, 39))
+point3 = new google.maps.LatLng(46.442958, -1.849493)
+image3 = new google.maps.MarkerImage("<%= asset_path('boats/boat3.png') %>", new google.maps.Size(25, 39), new google.maps.Point(0, 0), new google.maps.Point(13, 39))
+point4 = new google.maps.LatLng(46.439958, -1.832493)
+image4 = new google.maps.MarkerImage("<%= asset_path('boats/boat4.png') %>", new google.maps.Size(25, 39), new google.maps.Point(0, 0), new google.maps.Point(13, 39))
+point5 = new google.maps.LatLng(46.449958, -1.842493)
+image5 = new google.maps.MarkerImage("<%= asset_path('boats/boat5.png') %>", new google.maps.Size(25, 39), new google.maps.Point(0, 0), new google.maps.Point(13, 39))
+point6 = new google.maps.LatLng(46.432958, -1.849493)
+image6 = new google.maps.MarkerImage("<%= asset_path('boats/boat6.png') %>", new google.maps.Size(25, 39), new google.maps.Point(0, 0), new google.maps.Point(13, 39))
+shadow = new google.maps.MarkerImage("<%= asset_path('boats/shadow.png') %>", new google.maps.Size(49, 39), new google.maps.Point(0, 0), new google.maps.Point(13, 39))
+shape =
+  coord: [ 11, 0, 12, 1, 12, 2, 12, 3, 13, 4, 13, 5, 14, 6, 14, 7, 15, 8, 15, 9, 15, 10, 16, 11, 16, 12, 17, 13, 17, 14, 18, 15, 18, 16, 18, 17, 19, 18, 19, 19, 20, 20, 20, 21, 21, 22, 21, 23, 21, 24, 22, 25, 22, 26, 23, 27, 23, 28, 24, 29, 24, 30, 24, 31, 24, 32, 22, 33, 14, 34, 14, 35, 13, 36, 12, 37, 11, 38, 10, 38, 9, 37, 8, 36, 0, 35, 0, 34, 0, 33, 0, 32, 1, 31, 0, 30, 0, 29, 0, 28, 0, 27, 0, 26, 1, 25, 1, 24, 1, 23, 1, 22, 1, 21, 1, 20, 1, 19, 2, 18, 2, 17, 2, 16, 2, 15, 2, 14, 2, 13, 2, 12, 3, 11, 3, 10, 3, 9, 3, 8, 3, 7, 4, 6, 4, 5, 4, 4, 5, 3, 5, 2, 6, 1, 8, 0, 11, 0 ]
+  type: "poly"
+
+marker1 = new google.maps.Marker(
+  icon: image1
+  shadow: shadow
+  shape: shape
+  map: map
+  position: point1
+)
+marker2 = new google.maps.Marker(
+  icon: image2
+  shadow: shadow
+  shape: shape
+  map: map
+  position: point2
+)
+marker3 = new google.maps.Marker(
+  icon: image3
+  shadow: shadow
+  shape: shape
+  map: map
+  position: point3
+)
+marker4 = new google.maps.Marker(
+  icon: image4
+  shadow: shadow
+  shape: shape
+  map: map
+  position: point4
+)
+marker5 = new google.maps.Marker(
+  icon: image5
+  shadow: shadow
+  shape: shape
+  map: map
+  position: point5
+)
+marker6 = new google.maps.Marker(
+  icon: image6
+  shadow: shadow
+  shape: shape
+  map: map
+  position: point6
+)
+flightPlanCoordinates = [ new google.maps.LatLng(46.492948, -1.786493), new google.maps.LatLng(46.482958, -1.799493), new google.maps.LatLng(46.452958, -1.809493), new google.maps.LatLng(46.432958, -1.839493) ]
+flightPath = new google.maps.Polyline(
+  path: flightPlanCoordinates
+  strokeColor: "#10821d"
+  strokeOpacity: 0.8
+  strokeWeight: 2
+)
+flightPath.setMap map
+flightPlanCoordinates2 = [ new google.maps.LatLng(46.492948, -1.786493), new google.maps.LatLng(46.472958, -1.789493), new google.maps.LatLng(46.462958, -1.829493), new google.maps.LatLng(46.442958, -1.849493) ]
+flightPath2 = new google.maps.Polyline(
+  path: flightPlanCoordinates2
+  strokeColor: "#d1007f"
+  strokeOpacity: 0.8
+  strokeWeight: 2
+)
+flightPath2.setMap map
+flightPlanCoordinates3 = [ new google.maps.LatLng(46.492948, -1.786493), new google.maps.LatLng(46.462958, -1.809493), new google.maps.LatLng(46.462958, -1.809493), new google.maps.LatLng(46.432958, -1.849493) ]
+flightPath3 = new google.maps.Polyline(
+  path: flightPlanCoordinates3
+  strokeColor: "#f28e02"
+  strokeOpacity: 0.8
+  strokeWeight: 2
+)
+flightPath3.setMap map
+flightPlanCoordinates4 = [ new google.maps.LatLng(46.492948, -1.786493), new google.maps.LatLng(46.464958, -1.834493), new google.maps.LatLng(46.462958, -1.839493), new google.maps.LatLng(46.439958, -1.842493) ]
+flightPath4 = new google.maps.Polyline(
+  path: flightPlanCoordinates4
+  strokeColor: "#a51015"
+  strokeOpacity: 0.8
+  strokeWeight: 2
+)
+flightPath4.setMap map
+flightPlanCoordinates4 = [ new google.maps.LatLng(46.492948, -1.786493), new google.maps.LatLng(46.474958, -1.814493), new google.maps.LatLng(46.452958, -1.829493), new google.maps.LatLng(46.449958, -1.842493) ]
+flightPath4 = new google.maps.Polyline(
+  path: flightPlanCoordinates4
+  strokeColor: "#ffffff"
+  strokeOpacity: 0.8
+  strokeWeight: 2
+)
+flightPath4.setMap map
+flightPlanCoordinates4 = [ new google.maps.LatLng(46.492948, -1.786493), new google.maps.LatLng(46.464958, -1.814493), new google.maps.LatLng(46.462958, -1.829493), new google.maps.LatLng(46.439958, -1.832493) ]
+flightPath4 = new google.maps.Polyline(
+  path: flightPlanCoordinates4
+  strokeColor: "#ffe000"
+  strokeOpacity: 0.8
+  strokeWeight: 2
+)
+flightPath4.setMap map

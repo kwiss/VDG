@@ -3,32 +3,28 @@
 # source (there are others but whatever)
 source :rubygems
 
-# server
-gem 'thin'
-gem 'foreman'
-# rack
 gem 'rack'
-
-# sinatra
+gem 'thin'
 gem 'sinatra'
+gem 'sinatra-reloader'
 gem 'sinatra-partial'
-gem 'sinatra-flash', require: 'sinatra/flash' # enables flash[:notice] && flash[:error]
-
-# faster better stronger
-gem 'erubis'
+gem 'sinatra-flash', require: 'sinatra/flash'
 
 # asset stuff
 gem 'haml'
 gem 'sass'
-gem 'coffee-script'   # build the JS
-gem 'compass'         # build the CSS
-gem 'execjs'
-
-# sprockets galore
+gem 'coffee-script'
 gem 'sprockets'
 gem 'sprockets-sass'
 gem 'sprockets-helpers'
+gem 'compass'
+
+group :development do
+  gem 'foreman'
+  gem 'heroku'
+end
 
 group :production do
   gem 'pony'
+  gem 'uglifier'
 end

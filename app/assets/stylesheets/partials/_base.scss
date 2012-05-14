@@ -1,0 +1,64 @@
+
+#logo{
+  background: image-url("logo.png");
+  z-index: 10000;
+  position: absolute;
+  width: 244px;
+  height: 124px;
+  text-indent: -5000px;
+  right: 40px;
+  top: 60px;
+}
+
+#map_canvas { 
+  height: 100%;
+  z-index: 1000;
+  position: absolute;
+}
+
+
+#bottom-menu{
+  height: 50px;
+  background: #191f25 image-url("pattern.png");
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 2200;
+  font: 16px/27px Lato, Arial, sans-serif;
+}
+
+#bottom-menu ul li
+{
+  list-style: none;
+  float: left;
+}
+
+#bottom-menu ul
+{
+  float: left;
+  margin-top: 10px;
+  margin-left: 20px;
+  padding: 0;
+}   
+
+#bottom-menu ul li a
+{
+  font: 14px/32px Lato, Arial, sans-serif;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+#bottom-menu ul li a:hover
+{
+  color: #e2001a;
+}
+
+#partenaires
+{
+  float: right;
+  width:  250px;
+  height:  50px;
+  background: #f5f5f5 image-url('partenaires.png') no-repeat left top;
+}
