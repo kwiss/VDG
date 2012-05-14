@@ -16,9 +16,7 @@ body {
   background: image-url('participants.png') no-repeat left top; 
   width: 381px;
   position: absolute;
-  left: 0px;
-  top: 0;
-  right: 0px;
+  margin-left: -381px;
   z-index: 2200;
   height: 100%; }
 

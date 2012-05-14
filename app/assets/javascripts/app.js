@@ -2,7 +2,7 @@
 //= require response.min
 //= require easing
 
-//= require app
+//= require scripts
 //= require gmaps
 
 //= require scroller/mousewheel
