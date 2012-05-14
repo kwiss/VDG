@@ -26,7 +26,6 @@ gem 'execjs'
 
 # sprockets galore
 gem 'sprockets'
-gem 'sprockets-sass'
 gem 'sprockets-helpers'
 
 group :production do
